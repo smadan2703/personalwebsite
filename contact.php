@@ -1,35 +1,27 @@
 <?php
-$to = "smadan2703@gmail.com";
-$subject = "HTML email";
 
-$message = "
-<html>
-<head>
-<title>HTML email</title>
-</head>
-<body>
-<p>This email contains HTML Tags!</p>
-<table>
-<tr>
-<th>Firstname</th>
-<th>Lastname</th>
-</tr>
-<tr>
-<td>Madan</td>
-<td>Kumar</td>
-</tr>
-</table>
-</body>
-</html>
-";
+/* checking if data was sent */
+if(isset($_POST))
+{
+	foreach($_POST as $key => $field)
+		{
+		if(trim($field==""))
+			echo "this field is required, your input is blank: <b>$key</b> <br>";
+		$key=$field; //putting the response into variables
+		}
+		
+		/* starting the email message */
+	$to = "smadan2703@gmail.com"; // your email address
+	$subject = "Contact form submission";
+	$message = "First Name: $name";
+	$message .= "Email Address: $email <br> Comment: <br> $comment";
+	$from = "smadan2703@gmail.com";
+	if(mail($to,$subject,$message))
+		{
+		echo "Email was sent";
+		}
+}
 
-// Always set content-type when sending HTML email
-$headers = "MIME-Version: 1.0" . "\r\n";
-$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-// More headers
-$headers .= 'From: <webmaster@example.com>' . "\r\n";
-$headers .= 'Cc: myboss@example.com' . "\r\n";
 
-mail($to,$subject,$message,$headers);
 ?>
