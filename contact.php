@@ -1,4 +1,5 @@
-<?ph
+<?php
+
 /* checking if data was sent */
 if(isset($_POST))
 {
@@ -8,20 +9,14 @@ if(isset($_POST))
 			echo "this field is required, your input is blank: <b>$key</b> <br>";
 		$key=$field; //putting the response into variables
 		}
-		//Email information
-  $admin_email = "smadan2703@gmail.com";
-  $email = $_POST['email'];
-  $subject = $_POST['subject'];
-  $comment = $_POST['comment'];
-    echo "test";
-	echo $email;
-/* starting the email message 
+		
+		/* starting the email message */
 	$to = "smadan2703@gmail.com"; // your email address
-	
-	$message = "First Name: $name ";
-	$message = "Email Address: $email <br> Comment: <br> $comment";
-	$from = "smadan2703@gmail.com";*/
-	if(mail($admin_email, "$subject", $comment, "From:" $email))
+	$subject = "Contact form submission-$_POST['subject']";
+	$message = "First Name: $_POST['name'] ";
+	$message = "Email Address: $_POST['email'] <br> Comment: <br> $_POST['comment'] ";
+	$from = "smadan2703@gmail.com";
+	if(mail($to,$subject,$message))
 		{
 		echo "Email was sent";
 		}
