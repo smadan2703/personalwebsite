@@ -17,7 +17,7 @@ if(isset($_POST))
 	$subject = "Contact form submission";
 	$message = "First Name : $name";
 	$from = "$fr";
-	if(mail($to,$subject,$message, .$from))
+	if(mail($to,$subject,$message))
 		{
 		echo "Email was sent";
 		}
