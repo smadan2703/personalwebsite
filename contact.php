@@ -9,14 +9,19 @@ if(isset($_POST))
 			echo "this field is required, your input is blank: <b>$key</b> <br>";
 		$key=$field; //putting the response into variables
 		}
-		
-		/* starting the email message */
+		//Email information
+  $admin_email = "smadan2703@gmail.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['subject'];
+  $comment = $_REQUEST['comment'];
+    
+/* starting the email message 
 	$to = "smadan2703@gmail.com"; // your email address
-	$subject = "Contact form submission";
+	
 	$message = "First Name: $name ";
 	$message = "Email Address: $email <br> Comment: <br> $comment";
-	$from = "smadan2703@gmail.com";
-	if(mail($to,$subject,$message))
+	$from = "smadan2703@gmail.com";*/
+	if(mail($admin_email, "$subject", $comment, "From:" . $email))
 		{
 		echo "Email was sent";
 		}
