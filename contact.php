@@ -10,9 +10,9 @@ if(isset($_POST))
 		}
 		//Email information
   $admin_email = "smadan2703@gmail.com";
-  $email = $_REQUEST['email'];
-  $subject = $_REQUEST['subject'];
-  $comment = $_REQUEST['comment'];
+  $email = $_POST['email'];
+  $subject = $_POST['subject'];
+  $comment = $_POST['comment'];
     echo "test";
 	echo $email;
 /* starting the email message 
@@ -21,7 +21,7 @@ if(isset($_POST))
 	$message = "First Name: $name ";
 	$message = "Email Address: $email <br> Comment: <br> $comment";
 	$from = "smadan2703@gmail.com";*/
-	if(mail($admin_email, "$subject", $comment, "From:" $admin_email))
+	if(mail($admin_email, "$subject", $comment, "From:" $email))
 		{
 		echo "Email was sent";
 		}
