@@ -21,7 +21,7 @@ if(isset($_POST))
 	$message = "First Name: $name ";
 	$message = "Email Address: $email <br> Comment: <br> $comment";
 	$from = "smadan2703@gmail.com";*/
-	if(mail($admin_email, "$subject", $comment, "From:" $email))
+	if(mail($admin_email, "$subject", $comment, "From:" $admin_email))
 		{
 		echo "Email was sent";
 		}
