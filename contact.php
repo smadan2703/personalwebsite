@@ -14,7 +14,7 @@ if(isset($_POST))
 	$name = $_POST['name']
 	$to = "smadan2703@gmail.com"; // your email address
 	$subject = "Contact form submission";
-	$message = "First Name:"  $name;
+	$message = "First Name:  $name";
 	$message .= "Email Address: $email <br> Comment: <br> $comment";
 	$from = "smadan2703@gmail.com";
 	if(mail($to,$subject,$message))
