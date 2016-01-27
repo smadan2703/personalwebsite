@@ -17,7 +17,7 @@ if(isset($_POST))
 	$email = $_POST['email'];
 	$comments = $_POST['comments'];
 	$to = "smadan2703@gmail.com"; // your email address
-	$subject = "Contact form submission - $sub";
+	$subject = "Email from MK Site - $sub";
 	$message = "First Name : $name\n\nEmail ID : $email\n\nComments : $comments";
 	$from = "smadan2703@gmail.com";
 	if(mail($to,$subject,$message,"From:" . $email))
