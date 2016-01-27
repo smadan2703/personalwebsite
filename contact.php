@@ -1,4 +1,4 @@
-<html><body><?php
+<?php
 
 /* checking if data was sent */
 if(isset($_POST))
@@ -24,4 +24,3 @@ if(isset($_POST))
 
 
 ?>
-</body></html>
