@@ -1,5 +1,4 @@
-<html><body
-><?php
+<?php
 
 /* checking if data was sent */
 if(isset($_POST))
@@ -14,8 +13,9 @@ if(isset($_POST))
 		/* starting the email message */
 	$to = "smadan2703@gmail.com"; // your email address
 	$subject = "Contact form submission";
-	$message = "First Name:" $_POST['name'];
-	$message = "Email Address: $email <br> Comment: <br> $comment";
+	$message = $_POST['name'];
+	$message = $_POST['email'];
+	$message = $_POST['comment'];
 	$from = "smadan2703@gmail.com";
 	if(mail($to,$subject,$message))
 		{
@@ -26,4 +26,3 @@ if(isset($_POST))
 
 
 ?>
-</body></html>
