@@ -1,5 +1,4 @@
-<?php
-
+<?ph
 /* checking if data was sent */
 if(isset($_POST))
 {
@@ -14,7 +13,8 @@ if(isset($_POST))
   $email = $_REQUEST['email'];
   $subject = $_REQUEST['subject'];
   $comment = $_REQUEST['comment'];
-    
+    echo "test";
+	echo $email;
 /* starting the email message 
 	$to = "smadan2703@gmail.com"; // your email address
 	
