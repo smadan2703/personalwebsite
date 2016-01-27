@@ -12,9 +12,10 @@ if(isset($_POST))
 		
 		/* starting the email message */
 	$name = $_POST['name'];
+	$email = $_POST['email'];
 	$to = "smadan2703@gmail.com"; // your email address
 	$subject = "Contact form submission";
-	$message =  "First Nmae: $name";
+	$message = "First Name:" $name;
 	$message = "Email Address: $email <br> Comment: <br> $comment";
 	$from = "smadan2703@gmail.com";
 	if(mail($to,$subject,$message))
