@@ -20,6 +20,12 @@ $dt = "27-mar-2016";
 	$to = "smadan2703@gmail.com"; // your email address
 	$subject = "Email from MK Site";
 	$message = "First Name : $name\n\nEmail ID : $email\n\nComments : $comments";
+	
+	
+	if(mail($to,$subject,$message,"From:" . $email))
+		{
+		echo "Email was sent";
+		}
 
  $conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
  
@@ -31,10 +37,6 @@ $dt = "27-mar-2016";
 		/* starting the email message */
 	
 
-	if(mail($to,$subject,$message,"From:" . $email))
-		{
-		echo "Email was sent";
-		}
 }
 
 
