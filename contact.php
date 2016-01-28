@@ -21,9 +21,9 @@ $dt = date("Y-m-d H:i:s");
 	$subject = "Email from MK Site";
 	$message = "First Name : $name\n\nEmail ID : $email\n\nComments : $comments";
 
- $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+ $conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
  
- $sql = "INSERT INTO rattic ". "(name, date, email, comments) ". "VALUES('$name','$dt','$email',$comments)";
+ $sql = "INSERT INTO info ". "(name, date, email, comments) ". "VALUES('$name','$dt','$email',$comments)";
  
 /* checking if data was sent */
 
