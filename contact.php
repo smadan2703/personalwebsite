@@ -23,7 +23,7 @@ $dt = date("Y-m-d H:i:s");
 
  $conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
  
- $sql = "INSERT INTO info ". "(name, date, email, comments) ". "VALUES('$name','$dt','$email',$comments)";
+ $sql = "INSERT INTO info ". "(name, dt, email, comments) ". "VALUES('$name','$dt','$email',$comments)";
  
 /* checking if data was sent */
 
