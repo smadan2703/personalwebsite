@@ -1,15 +1,4 @@
 <?php
-
-$dbhost = "localhost";
-$dbuser = "username";
-$dbpass = "password";
-$dbname = "myDB";
-
- $conn = mysql_connect($dbhost, $dbuser, $dbpass);
- 
- $sql = 
- 
-/* checking if data was sent */
 if(isset($_POST))
 {
 	foreach($_POST as $key => $field)
@@ -19,13 +8,28 @@ if(isset($_POST))
 		$key=$field; //putting the response into variables
 		}
 		
-		/* starting the email message */
+$dbhost = "rattic-db.cmyjlrhcajvb.ap-southeast-1.rds.amazonaws.com";
+$dbuser = "rattic";
+$dbpass = "vine2013M";
+$dbname = "ratticdb";
+$dt = date("Y-m-d H:i:s");
+
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 	$comments = $_POST['comments'];
 	$to = "smadan2703@gmail.com"; // your email address
 	$subject = "Email from MK Site";
 	$message = "First Name : $name\n\nEmail ID : $email\n\nComments : $comments";
+
+ $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+ 
+ $sql = "INSERT INTO rattic ". "(name, date, email, comments) ". "VALUES('$name','$dt','$email',$comments)";
+ 
+/* checking if data was sent */
+
+		
+		/* starting the email message */
+	
 
 	if(mail($to,$subject,$message,"From:" . $email))
 		{
