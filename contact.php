@@ -26,10 +26,6 @@ $dt = "27-mar-2016";
 		{
 		echo "Email was sent";
 		}
-
- $conn = mysql_connect($dbhost, $dbuser, $dbpass, $dbname);
- 
- $sql = "INSERT INTO info ". "(name, dt, email, comments) ". "VALUES('$name','$dt','$email',$comments)";
  
 /* checking if data was sent */
 
