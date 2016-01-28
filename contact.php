@@ -12,7 +12,7 @@ $dbhost = "rattic-db.cmyjlrhcajvb.ap-southeast-1.rds.amazonaws.com";
 $dbuser = "rattic";
 $dbpass = "vine2013M";
 $dbname = "ratticdb";
-$dt = date("Y-m-d H:i:s");
+$dt = "27-mar-2016";
 
 	$name = $_POST['name'];
 	$email = $_POST['email'];
