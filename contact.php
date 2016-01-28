@@ -8,7 +8,7 @@ if(isset($_POST))
 		$key=$field; //putting the response into variables
 		}
 		
-$dbhost = "rattic-db.cmyjlrhcajvb.ap-southeast-1.rds.amazonaws.com";
+$dbhost = "rattic-db1.cmyjlrhcajvb.ap-southeast-1.rds.amazonaws.com";
 $dbuser = "rattic";
 $dbpass = "vine2013M";
 $dbname = "ratticdb";
