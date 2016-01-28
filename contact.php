@@ -1,5 +1,14 @@
 <?php
 
+$dbhost = "localhost";
+$dbuser = "username";
+$dbpass = "password";
+$dbname = "myDB";
+
+ $conn = mysql_connect($dbhost, $dbuser, $dbpass);
+ 
+ $sql = 
+ 
 /* checking if data was sent */
 if(isset($_POST))
 {
