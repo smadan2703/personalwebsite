@@ -27,29 +27,6 @@ $dt = "27-mar-2016";
 		echo "Email was sent";
 		}
  
- $con = mysql_connect("$dbhost","$dbuser","dbpass");
-if (!$con)
-  {
-  die('Could not connect: ' . mysql_error());
-  }
- 
-mysql_select_db("ratticdb", $con);
-
- $sql = "INSERT INTO info (name, dt, email, comments) VALUES('$name','$dt','$email',$comments)";
- 
- if (!mysql_query($sql,$con))
-  {
-  die('Error: ' . mysql_error());
-  }
-echo "1 record added";
- 
-mysql_close($con)
-
-/* checking if data was sent */
-
-		
-		/* starting the email message */
-	
 
 }
 
